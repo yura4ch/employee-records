@@ -48,7 +48,7 @@ class App extends Component {
     });
   }
 
-  onToggleIncrease = (id ) => {
+  onToggleIncrease = (id) => {
     this.setState(({data}) => ({
       data: data.map(item => {
         if(item.id === id) {
@@ -90,6 +90,8 @@ class App extends Component {
         return items.filter(item => item.rise);
       case 'moreThen1000':
         return items.filter(item => item.salary > 1000)
+      case 'willReceiveAPrize':
+        return items.filter(item => item.increase)
       default:
         return items
     }
@@ -98,6 +100,7 @@ class App extends Component {
 onFilterSelect = (filter) => {
   this.setState({filter});
 }
+
 
   render() {
     const {data, term, filter} = this.state;

@@ -13,7 +13,8 @@ const EmployeesList = ({data, onDelete, onToggleIncrease, onToggleRise}) => {
             {...itemProps}
             onDelete={() => onDelete(id)}
             onToggleIncrease={() => onToggleIncrease(id)}
-            onToggleRise={() => onToggleRise(id)}/>
+            onToggleRise={() => onToggleRise(id)}
+            />
         )
     })
 
